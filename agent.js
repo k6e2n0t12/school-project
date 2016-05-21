@@ -4,8 +4,10 @@ var ARRIVAL_R = 30;
 
 var Obstacle = function (center,size) {
 	this.center = center.clone();  
-	this.mesh = new THREE.Mesh (new THREE.CylinderGeometry(size,size,1,20),
-			new THREE.MeshBasicMaterial());
+	this.mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.25, 32),new THREE.MeshLambertMaterial({
+  	side: THREE.DoubleSide,
+    color: 0x00ffff
+  }));
 	this.mesh.position.copy (center);
 	this.size = size;
 };

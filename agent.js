@@ -4,10 +4,7 @@ var ARRIVAL_R = 30;
 
 var Obstacle = function (center,size) {
 	this.center = center.clone();  
-	this.mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.25, 32),new THREE.MeshLambertMaterial({
-  	side: THREE.DoubleSide,
-    color: 0x00ffff
-  }));
+	this.mesh = 
 	this.mesh.position.copy (center);
 	this.size = size;
 };
@@ -18,7 +15,10 @@ var Agent = function (pos, vel) {
 	this.force = new THREE.Vector3();
 	this.target = new THREE.Vector3();
 	this.size = 3;  // physical size of the character
-	this.mesh = new THREE.Mesh(new THREE.SphereGeometry(0.105, 32, 32), new THREE.MeshBasicMaterial({color:0xff9224}));
+	this.mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.25, 32),new THREE.MeshLambertMaterial({
+  	side: THREE.DoubleSide,
+    color: 0x00ffff
+  }));
 };
 
 Agent.prototype.step = function (dt) 

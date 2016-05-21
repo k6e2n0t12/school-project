@@ -16,8 +16,7 @@ var Agent = function (pos, vel) {
 	this.force = new THREE.Vector3();
 	this.target = new THREE.Vector3();
 	this.size = 3;  // physical size of the character
-	this.mesh = new THREE.Mesh (new THREE.CylinderGeometry(3,3,1,20),
-			new THREE.MeshBasicMaterial({color:0xff0000}));
+	this.mesh = new THREE.Mesh(new THREE.SphereGeometry(0.105, 32, 32), new THREE.MeshBasicMaterial({color:0xff9224}));
 };
 
 Agent.prototype.step = function (dt) 

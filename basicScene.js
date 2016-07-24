@@ -1,4 +1,4 @@
-var basicScene = fuction (scene){
+var basicScene = function (scene){
 	
 	console.log(scene);
 	var floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(16,8,32),new THREE.MeshLambertMaterial({

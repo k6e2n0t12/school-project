@@ -5,4 +5,5 @@ var basicScene = fuction (scene){
 	}));
 	floor.rotation.x=-Math.PI/2;
 	scene.add(floor);
+	console.log(scene);
 }
